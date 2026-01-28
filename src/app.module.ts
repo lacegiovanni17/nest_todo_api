@@ -7,7 +7,8 @@ import { TodosModule } from './todos/todos.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      process.env.MONGO_URI ?? 'mongodb://127.0.0.1:27017/todos',
+      process.env.MONGO_URI ??
+        'mongodb+srv://chidikehenry_db_user:9bIvljOZTuF70Hwy@cluster0.a4qkw6j.mongodb.net/',
     ),
     TodosModule,
   ],

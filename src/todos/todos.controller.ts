@@ -3,9 +3,9 @@ import {
   Controller,
   Delete,
   Get,
-  Param,
   Post,
   Put,
+  Query,
 } from '@nestjs/common';
 import { TodosService } from './todos.service';
 import { CreateTodoDto } from './dto/todos.dto';
@@ -20,8 +20,8 @@ export class TodosController {
     return this.todosService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string): Promise<Todo> {
+  @Get('single')
+  findOne(@Query('id') id: string): Promise<Todo> {
     return this.todosService.findOne(id);
   }
 
@@ -30,14 +30,14 @@ export class TodosController {
     return this.todosService.create(createTodoDto);
   }
 
-  @Delete(':id')
-  delete(@Param('id') id: string): Promise<Todo> {
+  @Delete()
+  delete(@Query('id') id: string): Promise<Todo> {
     return this.todosService.delete(id);
   }
 
-  @Put(':id')
+  @Put()
   update(
-    @Param('id') id: string,
+    @Query('id') id: string,
     @Body() updateTodoDto: CreateTodoDto,
   ): Promise<Todo> {
     return this.todosService.update(id, updateTodoDto);
