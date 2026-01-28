@@ -1,6 +1,16 @@
-// ./dto/create-todo.ts
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+import { IsBoolean, IsOptional, IsString, MinLength } from 'class-validator';
+
 export class CreateTodoDto {
-  readonly title: string;
-  readonly description: string;
-  readonly is_completed: boolean;
+  @IsString()
+  @MinLength(1)
+  title: string;
+
+  @IsOptional()
+  @IsString()
+  description?: string;
+
+  @IsOptional()
+  @IsBoolean()
+  is_completed?: boolean;
 }

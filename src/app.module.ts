@@ -1,11 +1,16 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { MongooseModule } from '@nestjs/mongoose';
 import { TodosModule } from './todos/todos.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/todos'), TodosModule],
+  imports: [
+    MongooseModule.forRoot(
+      process.env.MONGO_URI ?? 'mongodb://127.0.0.1:27017/todos',
+    ),
+    TodosModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
