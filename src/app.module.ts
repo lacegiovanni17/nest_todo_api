@@ -1,15 +1,25 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TodosModule } from './todos/todos.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      process.env.MONGO_URI ??
-        'mongodb+srv://chidikehenry_db_user:9bIvljOZTuF70Hwy@cluster0.a4qkw6j.mongodb.net/',
-    ),
+    ConfigModule.forRoot({
+      isGlobal: true, // makes ConfigService available everywhere
+    }),
+
+    MongooseModule.forRootAsync({
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => {
+        const mongo_uri = configService.get<string>('MONGO_URI');
+        if (!mongo_uri) throw new Error('MONGO_URI is not set in .env');
+        return { uri: mongo_uri };
+      },
+    }),
+
     TodosModule,
   ],
   controllers: [AppController],
