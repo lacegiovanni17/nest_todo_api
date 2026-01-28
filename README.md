@@ -1,3 +1,30 @@
+# TODO
+## TODO NEST BACKEND API PROJECT
+This ✅ Todo API project is a RESTful backend application built with NestJS ⚙️ and MongoDB 🛢️, designed to demonstrate clean architecture, modular design, and best practices in backend development. It allows users to create todos with a title and optional description, update their completion status ✍️, retrieve single or multiple tasks 📋, and delete them when no longer needed.
+
+The project leverages NestJS’s powerful module–controller–service structure to ensure scalability and maintainability, while MongoDB provides flexible and efficient data persistence for task records. Environment-based configuration 🔐 is used to manage sensitive settings like database connection strings, keeping the codebase secure and production-ready. All endpoints were thoroughly tested using Postman 📬 to validate request handling, data flow, and error responses.
+
+Overall, this project serves as a solid example of how to build a clean, testable, and extensible backend API with NestJS 🚀—ideal for learning, showcasing backend skills, or extending into a full-stack application.
+
+## Backend Picture of MovieTracker Fullstack Project
+<img width="1420" height="873" alt="Screenshot 2026-01-28 at 13 59 15" src="https://github.com/user-attachments/assets/0a1b0ec3-280f-4f9f-b244-304e926bc00a" />
+
+## About 
+* 👋 Hi, I’m Chidike Henry
+* 😎 I’m a backend developer
+* 💻 This is a backend api project built with NodeJS, NestJS and Typescript. 
+* 💞️ I’m looking to collaborate on NestJS Backend projects
+* 📫 How to reach me chidike.henry@gmail.com
+
+## Technologies Used
+* NestJA
+* NodeJS
+* MongoDB
+* Typescript
+* Github
+* Git
+* Postman
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
@@ -70,6 +97,15 @@ $ mau deploy
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
+## MongoDB as Database
+<img width="1401" height="635" alt="Screenshot 2026-01-28 at 14 03 03" src="https://github.com/user-attachments/assets/b7a0475f-29fd-4afb-9b30-53ea4e53ec6c" />
+
+## Author
+#### 👤 Author1
+- GitHub: [@lacegiovanni17]https://github.com/lacegiovanni17
+- Twitter: [@ChidikeC] https://twitter.com/ChidikeC
+- LinkedIn: [LinkedIn]https://www.linkedin.com/in/chidike-chizoba-25628a40/
+
 ## Resources
 
 Check out a few resources that may come in handy when working with NestJS:
@@ -96,3 +132,14 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+## Contributing 
+Contributions, issues, critics and feature requests are welcome!
+
+## Show your support
+Please give a ⭐️ if you like this project! 
+
+## Acknowledgments
+- Hat tip to Heimdall Project
+- Inspiration to all devs
+- etc
